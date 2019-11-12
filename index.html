@@ -96,7 +96,7 @@
             var loader = new THREE.OBJVertexColorLoader(manager);
             loader.load('models/yo.obj', function (object) {
                 object.rotation.x = Math.PI;
-                object.rotation.y = Math.PI/2;
+                object.rotation.y = -Math.PI;
                 //console.dir(object);
                 scene.add(object);
                 objects.push(object);
