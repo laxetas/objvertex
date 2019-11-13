@@ -57,7 +57,7 @@
             document.body.appendChild(container);
 
             camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
-            camera.position.z = 10;
+            camera.position.z = 125;
 
             controls = new THREE.TrackballControls(camera);
             controls.rotateSpeed = 4.0;
@@ -98,29 +98,17 @@
                 //object.rotation.x = Math.PI;
                 //object.rotation.y = -Math.PI;
                 //console.dir(object);
+                object.position.x=-10;
+                object.position.y=-10;
+                object.scale.x=object.scale.y=object.scale.z=0.2;
+                
+                
                 scene.add(object);
                 objects.push(object);
 
                 progressBar.style.display = "none";
 
 
-                tween = new TWEEN.Tween(controls.target)
-                    .to({
-                        x: 1.686643093956337,
-                        y: -3.954080305865332,
-                        z: -2.3580904765270243
-                    }, 1000)
-                    .easing(TWEEN.Easing.Quintic.Out)
-                    .start();
-
-                tween = new TWEEN.Tween(camera.position)
-                    .to({
-                        x: 3.558467649434143,
-                        y: -2.5468095593526616,
-                        z: -2.3931801395362005
-                    }, 1000)
-                    .easing(TWEEN.Easing.Quintic.Out)
-                    .start();
 
             }, onProgress, onError);
 
