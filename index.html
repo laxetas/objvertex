@@ -95,21 +95,14 @@
 
             var loader = new THREE.OBJVertexColorLoader(manager);
             loader.load('models/yo.obj', function (object) {
-                //object.rotation.x = Math.PI;
-                //object.rotation.y = -Math.PI;
-                //console.dir(object);
-                object.position.x=-10;
-                object.position.y=-10;
+                object.rotation.z = Math.PI;
+                object.position.x=15;
+                object.position.y=20;
                 object.scale.x=object.scale.y=object.scale.z=0.2;
-                
-                
+                                
                 scene.add(object);
                 objects.push(object);
-
                 progressBar.style.display = "none";
-
-
-
             }, onProgress, onError);
 
             renderer = new THREE.WebGLRenderer();
